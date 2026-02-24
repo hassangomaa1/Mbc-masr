@@ -14,30 +14,22 @@
     <video id="video" controls></video>
 
     <script>
-        // الرابط اللي معاك (تأكد إنه لسه شغال في المتصفح للحظة دي)
-        var videoSrc = 'https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8';
-        var video = document.getElementById('video');
+    // رابط مباشر شغال حالياً (مؤقت)
+    const videoSrc = 'https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8';
+    const video = document.getElementById('video');
 
-        if (Hls.isSupported()) {
-            var hls = new Hls({
-                // إعدادات لتخطي بعض قيود الحماية البسيطة
-                xhrSetup: function(xhr, url) {
-                    xhr.withCredentials = false; 
-                }
-            });
-            hls.loadSource(videoSrc);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                video.play();
-            });
-        } 
-        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            // دعم متصفح Safari (Apple)
-            video.src = videoSrc;
-            video.addEventListener('loadedmetadata', function() {
-                video.play();
-            });
-        }
-    </script>
+    if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            video.play();
+        });
+    } 
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoSrc;
+    }
+</script>
+
 </body>
 </html>
