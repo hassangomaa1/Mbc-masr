@@ -1,27 +1,25 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
+    // تفعيل خاصية الـ CORS عشان المتصفح ميعملش بلوك
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+
     try {
-        // صفحة المصدر اللي بنسحب منها الرابط الجديد
-        // ملاحظة: دي صفحة تجريبية، يفضل استخدام رابط المصدر الفعلي لقناتك
-        const targetUrl = 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/eg.m3u'; 
-        
-        // هنا إحنا بنجيب البيانات من المصدر
-        const response = await axios.get(targetUrl);
-        
-        // بنبحث عن رابط mbc masr داخل القائمة
-        // (تقدر تبدلها بـ Regex يجيب الرابط المباشر من أي صفحة تانية)
+        // محاولة جلب روابط من قائمة IPTV محدثة
+        const response = await axios.get('https://iptv-org.github.io/iptv/countries/eg.m3u', { timeout: 5000 });
         const lines = response.data.split('\n');
-        const mbcLink = lines.find(line => line.includes('mbc-masr') && line.endsWith('.m3u8'));
+        
+        // البحث عن قناة MBC Masr
+        const mbcLink = lines.find(line => line.toLowerCase().includes('mbc_masr') && line.includes('.m3u8'));
 
         if (mbcLink) {
-            res.redirect(mbcLink.trim());
-        } else {
-            // لو مالقناش الرابط الجديد، بنستخدم الرابط الحالي كاحتياطي
-            res.redirect('https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8');
+            return res.redirect(mbcLink.trim());
         }
-    } catch (error) {
-        // في حالة الخطأ وجهه للرابط اللي كان شغال معاك
-        res.redirect('https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8');
+    } catch (e) {
+        console.log("Error fetching dynamic link, using fallback.");
     }
+
+    // إذا فشل في جلب رابط جديد، بيحول الزائر للرابط اللي معاك (الاحتياطي)
+    res.redirect('https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8');
 }
