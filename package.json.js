@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "axios": "^1.0.0"
+  }
+}
+
+

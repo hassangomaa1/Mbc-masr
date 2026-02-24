@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>البث المباشر</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        video { width: 80%; max-width: 800px; border: 2px solid #333; }
+    </style>
+</head>
+<body>
+
+    <video id="video" controls></video>
+
+    <script>
+        // الرابط اللي معاك (تأكد إنه لسه شغال في المتصفح للحظة دي)
+        var videoSrc = 'https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8';
+        var video = document.getElementById('video');
+
+        if (Hls.isSupported()) {
+            var hls = new Hls({
+                // إعدادات لتخطي بعض قيود الحماية البسيطة
+                xhrSetup: function(xhr, url) {
+                    xhr.withCredentials = false; 
+                }
+            });
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        } 
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // دعم متصفح Safari (Apple)
+            video.src = videoSrc;
+            video.addEventListener('loadedmetadata', function() {
+                video.play();
+            });
+        }
+    </script>
+</body>
+</html>
