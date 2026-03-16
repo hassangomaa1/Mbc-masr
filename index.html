@@ -1,41 +1,447 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
+<html lang="en"><head>
+    <meta name="google-site-verification" content="xAIlcibIckd3FptBwLiqMag0gNQ-o875Et200vp9_Mw">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البث المباشر - MBC</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <style>
-        body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; }
-        .container { width: 90%; max-width: 900px; text-align: center; }
-        video { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: #111; }
-        .status { color: #555; margin-top: 10px; font-size: 14px; }
-    </style>
+    <meta name="robots" content="index, follow">
+    <title>hassan gomaa x7 | Front-End Developer | Portfolio</title>
+    <meta name="author" content="hassan gomaa x7">
+    <meta name="description" content="hassan gomaa x7 is a Front-End Developer with expertise in HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS. I create modern, fast, and responsive websites that are both user-friendly and SEO-optimized. Explore my portfolio to see real projects and practical Front-End solutions.">
+    <meta name="keywords" content="hassan gomaa x7, Front-End Developer, HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, responsive websites, modern web design, web development, portfolio, SEO-friendly websites, Eng hassan gomaa , Eng hassan gomaa abdelegaleel, hassan gomaa, developer hassan gomaa , enginerr hassan gomaa , Front-End developer hassan gomaa, مطور الويب حسن جمعه الشيخ, المبرمج حسن جمعه الشيخ, المهندس حسن جمعه الشيخ, حسن جمعه الشيخ, مصمم المواقع حسن جمعه الشيخ, بشمهندس حسن جمعه, بشمهندس حسن جمعه الشيخ">
+    <!-- bootstrap link (CSS) -->
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome icons cdn -->
+    <link rel="stylesheet" href="all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- bootstrap icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- website icon -->
+    <link rel="icon" href="Images/icon.webp">
 </head>
-<body>
 
-    <div class="container">
-        <video id="video" controls autoplay playsinline></video>
-        <div class="status" id="status">جاري الاتصال بالبث...</div>
+<body>
+    <!-- strart nav bar -->
+    <nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary px-md-5 nav-custom shadow-lg nav-scroll">
+        <div class="container-fluid px-md-5">
+            <a class="navbar-brand" href="#"><img loading="lazy" src="Images/Logo.webp" class="img-fluid" alt="Logo"></a>
+            <div class="d-flex pe-2 align-items-center">
+                <button id="Toggle-menu-custom" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-2 fw-bold"></i>
+                </button>
+                <button class="theme-btn border-start ps-3 d-lg-none border-0 bg-transparent">
+                    <i class="bi bi-moon-fill fs-3"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="Custom-Border navbar-nav ms-auto gap-3 pt-3 border-top pt-lg-0 align-items-lg-center fs-6 fs-md-6">
+                    <li class="nav-item">
+                        <a class="nav-link nav-links-custom  active" title="go to home section" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-links-custom" title="go to about me section" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-links-custom " href="#projects" title="Front-End Projects by hassan gomaa">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-links-custom " title=" go to Education section" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-links-custom " title=" go to contact with me section" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <button class=" theme-btn border-0 bg-transparent d-none d-lg-block"><i class="bi bi-moon-fill fs-3"></i></button>
+                    </li>
+                    <li class="nav-item d-none d-lg-block border-start ps-4">
+                        <a class="btn btn-primary  " download="" title="download my cv" href="https://drive.google.com/uc?id=1XBVo0lTiLUUpclqQdpm_ZjtP5mKntrl2&amp;export=download">Download
+                            CV</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav bar -->
+
+
+    <main>
+        <!-- start home sectio -->
+        <section id="home" class="d-flex flex-column justify-content-center  d-lg-block">
+            <!-- icons in background -->
+            <i class="bi bi-braces icon-page-1"></i>
+            <i class="bi bi-code-slash icon-page-2"></i>
+<div class="container home-content">
+    
+    <div class="img-parent">
+        <div class="img-child">
+            <img loading="lazy" src="Images/hassan gomaa x7 photo.webp" alt="hassan gomaa x7 Front-End Developer Photo">
+        </div>
+    </div>
+    
+    <div class="text d-flex flex-column justify-content-center align-items-center gap-2 mt-5">
+        <p class="mt-0">Hello I am</p>
+        
+        <!-- إضافة حاوية ثابتة العرض -->
+        <div class="h1-container">
+            <h1 id="element">Eng Hassan Gomaa</h1>
+        </div>
+        
+        <h2>A <span class="text-primary">Front-End Developer</span></h2>
     </div>
 
-<script>
-    // رابط مباشر شغال حالياً (مؤقت)
-    const videoSrc = 'https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8';
-    const video = document.getElementById('video');
+    
 
-    if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(videoSrc);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, function() {
-            video.play();
-        });
-    } 
-    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = videoSrc;
-    }
-</script>
+                    <a class="btn btn-primary  d-lg-none hero-btn" download="" title="download my cv" href="https://drive.google.com/file/d/15fs2EGBK-CbhotcZm70abAzxnCOXghGr/view?usp=drivesdk&amp;export=download">Download
+                        CV
+                    </a>
+                    </div>
+                    <div class="scroll-down-animation">
+                        <div class="ball"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end home section -->
 
-</body>
-</html>
+        <!-- scroll to top bottom -->
+<button id="scroll-to-top"><i class="bi bi-chevron-up"></i></button>
+
+        <!-- start about section -->
+        <section id="about" class="pt-5 mt-5">
+            <div class="container pt-3">
+                <div class="head-text d-flex flex-column align-items-center">
+                    <h2 class="text-center custom-heading-section">About <span class="text-primary">Me</span></h2>
+                    <i class="bi bi-code text-center icon-heading"><span class="right-line"></span></i>
+                </div>
+                <div class="text">
+                    <p>
+                       I'm hassan gomaa, a front-end developer specializing in building seamless user experiences and responsive designs. I have experience converting design files into clean code using HTML, CSS, and JavaScript, with a focus on improving website performance and SEO to ensure the delivery of innovative and high-quality software solutions. 
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- end about section -->
+
+        <!-- start projects -->
+        <section id="projects" class=" mt-5">
+            <div class="container">
+                <div class="head-text d-flex flex-column align-items-center mb-5">
+                    <h2 class="text-center custom-heading-section">Latest <span class="text-primary">Projects</span>
+                    </h2>
+                    <i class="bi bi-code text-center icon-heading"><span class="right-line"></span></i>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center gap-3 gap-md-2 gap-lg-3">
+                    <article class="card col-11 col-sm-8 col-md-5 col-lg-3 p-0 rounded-4 overflow-hidden">
+                        <div class="img-container overflow-hidden">
+                            <img src="Images/project-img-1.webp" loading="lazy" alt="Restaurant website" class="card-img-top">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-evenly gap-md-3 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="card-title mb-0">Restaurant</h3>
+                                <div class="d-flex justify-content-center align-items-center gap-2 date-group">
+                                    <i class="bi bi-calendar-fill"></i>
+                                    <span>13/12/2025</span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-secondary">
+                                    A sleek, responsive restaurant website, crafted with the latest technologies to
+                                    deliver
+                                    a seamless and captivating user experience. Modern design that highlights every
+                                    detail
+                                    of the restaurant and draws visitors in from the very first glance.
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column gap-3 mb-3 mb-md-0 mb-lg-3 ">
+                                <h4 class="mb-0">Technologies</h4>
+                                <div class="technologies">
+                                    <span class="tech">HTML</span>
+                                    <span class="tech">CSS</span>
+                                    <span class="tech">JavaScript</span>
+                                </div>
+                            </div>
+                            <a href="https://magdy-dev311.github.io/field-training-restaurant/" target="_blank" title="go to this website" class="btn btn-primary d-flex w-100 justify-content-center align-items-center gap-2 rounded-3 ">
+                                <i class="ni bi-globe2"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card col-11 col-sm-8 col-md-5 col-lg-3 p-0 rounded-4 overflow-hidden">
+                        <div class="img-container overflow-hidden">
+                            <img src="Images/project-img-2.webp" loading="lazy" alt="Field Training" class="card-img-top">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-evenly gap-md-3 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="card-title mb-0">Field Training</h3>
+                                <div class="d-flex justify-content-center align-items-center gap-2 date-group">
+                                    <i class="bi bi-calendar-fill"></i>
+                                    <span>27/12/2025</span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-secondary">
+                                    During my field training at We Applied Technology School, I designed a portfolio
+                                    using HTML, CSS, JavaScript, and
+                                    Bootstrap, which helped me enhance my skills and grow my expertise in web
+                                    development.
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column gap-3 mb-3 mb-md-0 mb-lg-3 ">
+                                <h4 class="mb-0">Technologies</h4>
+                                <div class="technologies">
+                                    <span class="tech">HTML</span>
+                                    <span class="tech">CSS</span>
+                                    <span class="tech">JavaScript</span>
+                                    <span class="tech">BootStrap</span>
+                                </div>
+                            </div>
+                            <a href="https://magdy-dev311.github.io/Field-training-three/" target="_blank" title="go to this website" class="btn btn-primary d-flex w-100 justify-content-center align-items-center gap-2 rounded-3 ">
+                                <i class="ni bi-globe2"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card col-11 col-sm-8 col-md-5 col-lg-3 p-0 rounded-4 overflow-hidden">
+                        <div class="img-container overflow-hidden">
+                            <img src="Images/project-img-3.webp" loading="lazy" alt="Landing page" class="card-img-top">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-evenly gap-md-3 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="card-title mb-0">Landing-page</h3>
+                                <div class="d-flex justify-content-center align-items-center gap-2 date-group">
+                                    <i class="bi bi-calendar-fill"></i>
+                                    <span>15/8/2025</span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-secondary ">
+                                    it's my first web development project using HTML and CSS. It showcases the
+                                    foundational skills I learned and was a
+                                    significant milestone in my journey. The project reflects my passion for learning
+                                    and growth.
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column gap-3 mb-3 mb-md-0 mb-lg-3 ">
+                                <h4 class="mb-0">Technologies</h4>
+                                <div class="technologies">
+                                    <span class="tech">HTML</span>
+                                    <span class="tech">CSS</span>
+                                </div>
+                            </div>
+                            <a href="https://magdy-dev311.github.io/first-project/" target="_blank" title="go to this website" class="btn btn-primary d-flex w-100 justify-content-center align-items-center gap-2 rounded-3 ">
+                                <i class="ni bi-globe2"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </article>
+                      <article class="card col-11 col-sm-8 col-md-5 col-lg-3 p-0 rounded-4 overflow-hidden">
+                        <div class="img-container overflow-hidden">
+                            <img src="Images/project-img-2.webp" loading="lazy" alt="Field Training" class="card-img-top">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-evenly gap-md-3 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h3 class="card-title mb-0">Field Training</h3>
+                                <div class="d-flex justify-content-center align-items-center gap-2 date-group">
+                                    <i class="bi bi-calendar-fill"></i>
+                                    <span>27/12/2025</span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-secondary">
+                                    During my field training at We Applied Technology School, I designed a portfolio
+                                    using HTML, CSS, JavaScript, and
+                                    Bootstrap, which helped me enhance my skills and grow my expertise in web
+                                    development.
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column gap-3 mb-3 mb-md-0 mb-lg-3 ">
+                                <h4 class="mb-0">Technologies</h4>
+                                <div class="technologies">
+                                    <span class="tech">HTML</span>
+                                    <span class="tech">CSS</span>
+                                    <span class="tech">JavaScript</span>
+                                    <span class="tech">BootStrap</span>
+                                </div>
+                            </div>
+                            <a href="https://magdy-dev311.github.io/Field-training-three/" target="_blank" title="go to this website" class="btn btn-primary d-flex w-100 justify-content-center align-items-center gap-2 rounded-3 ">
+                                <i class="ni bi-globe2"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- end projects -->
+    </main>
+
+    <!-- start education section -->
+    <section id="education" class="mt-5">
+        <div class="container">
+            <div class="head-text d-flex flex-column align-items-center">
+                <h2 class="text-center custom-heading-section"><span class="text-primary">Education</span></h2>
+                <i class="bi bi-code text-center icon-heading"><span class="right-line"></span></i>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <article class="col-11 col-lg-9 col-xl-7  p-4 py-md-5 px-md-5  mt-4 mx-lg-5 rounded-4 shadow-lg bg-light-subtle d-flex flex-column  justify-content-center gap-3 con-div-edu position-relative">
+                    <div class="d-flex flex-column gap-2 gap-sm-0 flex-sm-row justify-content-between edu-head position-relative pb-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="edu-div d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3>We School for Applied Technology</h3>
+                        </div>
+                        <div class="edu-date d-flex justify-content-center align-items-center">
+                            2024 - 2027
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Programming &amp; Web Development Track</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </section>
+    <!-- end education section -->
+
+    <!-- start skills section -->
+    <section id="skills" class="mt-5">
+        <div class="container">
+            <div class="head-text d-flex flex-column align-items-center mb-2">
+                <h2 class="text-center custom-heading-section"><span class="text-primary">Skills</span></h2>
+                <i class="bi bi-code text-center icon-heading"><span class="right-line"></span></i>
+            </div>
+
+            <div class="carous d-flex align-items-center gap-2">
+                <div class="slider">
+                    <div class="logos-slider d-flex align-items-center gap-2">
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-html5" style="color: #e34f26;"></i><span>HTML</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i><span>CSS</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-square-js" style="color: #f7df1e;"></i><span>JavaScript</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-bootstrap" style="color: #6F42C1;"></i><span>Bootstrap</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-water" style="color: #38BDF8;"></i><span>Tailwind CSS</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-magnifying-glass" style="color: #2563EB;"></i><span>SEO</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-microsoft" style="color: #00a1f1;"></i><span>Microsoft Office</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-python" style="color: #4584b6;"></i><span>Python</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-git-alt" style="color: #F1502F;"></i><span>Git</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-github" style="color: #333;"></i><span>GitHub</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-gear" style="color: #4b5563;"></i><span>APIs</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-paint-brush" style="color: #06B6D4;"></i><span>UI &amp; UX</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-network-wired" style="color: rgb(30, 210, 180);"></i><span>Network</span></div>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="logos-slider d-flex align-items-center gap-2">
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-html5" style="color: #e34f26;"></i><span>HTML</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i><span>CSS</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-square-js" style="color: #f7df1e;"></i><span>JavaScript</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-bootstrap" style="color: #6F42C1;"></i><span>Bootstrap</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-water" style="color: #38BDF8;"></i><span>Tailwind CSS</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-magnifying-glass" style="color: #2563EB;"></i><span>SEO</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-microsoft" style="color: #00a1f1;"></i><span>Microsoft Office</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-python" style="color: #4584b6;"></i><span>Python</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-git-alt" style="color: #F1502F;"></i><span>Git</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-brands fa-github" style="color: #333;"></i><span>GitHub</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-gear" style="color: #4b5563;"></i><span>APIs</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-paint-brush" style="color: #06B6D4;"></i><span>UI &amp; UX</span></div>
+                        <div class="logo d-flex align-items-center gap-1"><i class="fa-solid fa-network-wired" style="color: rgb(30, 210, 180);"></i><span>Network</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- end skills section -->
+
+    
+    <!-- start contact section -->
+    <section id="contact" class="mt-5">
+        <div class="container">
+            <div class="head-text d-flex flex-column align-items-center">
+                <h2 class="text-center custom-heading-section">Contact <span class="text-primary">Me</span>
+                </h2>
+                <i class="bi bi-code text-center icon-heading"><span class="right-line"></span></i>
+            </div>
+
+            <div class="row flex-column flex-lg-row justify-content-center gap-5 gap-lg-3 align-items-center mt-5">
+
+                <div class=" col-11 col-lg-4 d-flex flex-column gap-2">
+                    <div class="d-flex align-items-center gap-3 contact-item contact-item-email">
+                        <a href="mailto:hassangomaa.dev1@gmail.com"><i class="fa-regular fa-envelope email"></i></a>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <a href="mailto:hassangomaa.dev1@gmail.com">
+                                <p>hassangomaa.dev1@</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 contact-item contact-item-phone">
+                        <a href="tel:+201044170795" target="_blank"><i class="fa-solid fa-phone phone"></i></a>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <a href="tel:+201503077116" target="_blank">
+                                <p>+201044170795</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 contact-item contact-item-whatsapp">
+                        <a href="https://wa.me/message/RIJG3TKS2DAIN1" target="_blank"><i class="fa-brands fa-whatsapp whatsapp"></i></a>
+                        <div class="text">
+                            <h3>Whatsapp</h3>
+                            <a href="https://wa.me/message/RIJG3TKS2DAIN1" target="_blank">
+                                <p>+201044170795</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 contact-item contact-item-linkedin">
+                        <a href="https://www.linkedin.com/in/magdy-ziad-6aaa23323/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPYDahmcUQaazXs%2FSqnGErA%3D%3D" target="_blank"><i class="fa-brands fa-square-facebook facebook"></i></a>
+                        <div class="text">
+                            <h3>Facebook</h3>
+                            <a href="https://www.linkedin.com/in/magdy-ziad-6aaa23323/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPYDahmcUQaazXs%2FSqnGErA%3D%3D" target="_blank">
+                                <p>Hassan Gomaa</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 contact-item contact-item-github">
+                        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github github"></i></a>
+                        <div class="text">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com" target="_blank">
+                                <p>hassangomaa1</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="form" method="post" name="contact-form" action="https://script.google.com/macros/s/AKfycbz4j9Z4BMYH8M9WetIuChHlAgWI8UujNSHmOVfeb165-ijJ6mZS1Gt1hdZ-SruekmP9RA/exec" class="col-11 col-lg-7 d-flex flex-column gap-3">
+                    <h2 class="text-center custom-heading-section d-lg-none mt-5 mb-2">Send <span class="text-primary">Message</span>
+                    </h2>
+                    <input type="text" placeholder="Name" class="form-control" name="name" required="">
+                    <input type="email" placeholder="email" class="form-control" name="email" required="">
+                    <input type="phone" placeholder="phone" class="form-control" name="phone" required="">
+                    <textarea placeholder="Message" rows="10" class="form-control" name="message" required=""></textarea>
+                    <div class="d-grid"><button type="submit" class="btn btn-primary">Submit</button></div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- end contact section -->
+
+    <footer class="shadow-lg">
+        © 2025 | Designed By hassan gomaa | All rights reserved
+    </footer>
+
+    <!-- boot strap link (JS) -->
+    <script src="bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- script link (JS) -->
+    <script src="script.js"></script>
+
+
+</body></html>
