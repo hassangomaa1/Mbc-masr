@@ -991,6 +991,7 @@ footer {
     }
 
     .img-parent {
+        margin-right: 30px; 
         margin-top: 110px;
     }
 
@@ -1000,7 +1001,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 5px;
 }
 
 /* الصورة يسار والنص يمين */
