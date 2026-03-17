@@ -1051,7 +1051,9 @@ footer {
     display: inline-block;       /* يسمح بأن تكون بجانب عناصر أخرى */
     width: 37ch;                 /* نفس أقصى عرض للنص #element */
     overflow: hidden;             /* إخفاء الجزء الزائد عند الأنيميشن */
-    white-space: nowrap;          /* منع كسر النص */
+    white-space: nowrap;  
+    margin-left: 30px; 
+    /* منع كسر النص */
 }
 #home .text p{
     margin-top:-30px;
