@@ -958,12 +958,7 @@ footer {
     #education .con-div-edu h3 {
         font-size: 22px;
     }
-###.h1-container {
- /* يسمح بأن تكون بجانب عناصر أخرى */
-    width: 40ch;                 /* نفس أقصى عرض للنص #element */
- 
-
-}
+} 
 
 @media (min-width:769px) and (max-width:992px) {
     .col-md-5 {
