@@ -462,7 +462,7 @@ body.dark footer {
     font-size: 18px;
     line-height: 1.8;
     color: #6b7280;
-    text-align: justify;
+    text-algnn: justify;
     font-weight: 400;
     transition: 1s;
 }
@@ -1000,7 +1000,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    gap: 50px;
 }
 
 /* الصورة يسار والنص يمين */
@@ -1052,7 +1052,7 @@ footer {
     width: 37ch;                 /* نفس أقصى عرض للنص #element */
     overflow: hidden;             /* إخفاء الجزء الزائد عند الأنيميشن */
     white-space: nowrap;  
-    margin-left: 30px; 
+ ###   margin-left: 30px; 
     /* منع كسر النص */
 }
 #home .text p{
