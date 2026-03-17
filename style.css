@@ -1050,7 +1050,7 @@ footer {
 /* حاوية ثابتة العرض لتجنب تحريك الصورة */
 .h1-container {
     display: inline-block;       /* يسمح بأن تكون بجانب عناصر أخرى */
-    width: 37ch;                 /* نفس أقصى عرض للنص #element */
+    width: 40ch;                 /* نفس أقصى عرض للنص #element */
     overflow: hidden;             /* إخفاء الجزء الزائد عند الأنيميشن */
     white-space: nowrap;  
  ###   margin-left: 30px; 
